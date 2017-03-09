@@ -1,8 +1,8 @@
 ## 联系我
 
 * GitHub：[PlayLive](https://github.com/playlive)
-* email：smallpandadream@163.com
-* [Weibo](http://weibo.com/ioslive)
+* Email：<smallpandadream@163.com>
+* Weibo: [@放飞吧小熊](http://weibo.com/ioslive)
 
 ## 关于本站
 
