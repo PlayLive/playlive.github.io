@@ -9,19 +9,19 @@ excerpt: please tell me who your are
 
 * 解决办法
 
-1. 打开终端执行
+#### 1. 打开终端执行
 ``` shell
-    git config --global -e
+git config --global -e
 ```
 
-2. 修改页面中参数
+#### 2. 修改页面中参数
 
     按 i 进行修改操作，光标移动到name和email修改位你自己的
+      name=yourname
+      email=youremail@163.com  
 
-   name=yourname
-   email=youremail@163.com
-3. 保存
+#### 3. 保存
 
-    按Esc  输入  :wq  保存
+    按Esc  输入  :wq  保存  
 
     再次commit 问题就解决啦
