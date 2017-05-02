@@ -37,7 +37,7 @@ excerpt: FMDB的使用
 ```
 
   #### 1.创建数据库
-  ``` objective-c
+  ``` shell
    NSString *documentPath=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
    NSString *databasePath=[documentPath stringByAppendingPathComponent:DataBase_Name];
 
@@ -46,7 +46,7 @@ excerpt: FMDB的使用
   ```
 
   #### 2.创建表
-  ``` objective-c
+  ``` shell
   if([database open])
 {
   BOOL createTableResult=[database executeUpdate: [NSString stringWithFormat:@"create table %@ (%@ text,%@ text,%@ integer)",TableName_Table1,Table1_ColumnName1,Table1_ColumnName2,Table1_ColumnName3]];
@@ -55,7 +55,7 @@ excerpt: FMDB的使用
   ```
 
   #### 3.插入数据
-  ``` objective-c
+  ``` shell
   if([database open])
 {
   BOOL insertResult=[database executeUpdate:[NSString stringWithFormat:@"insert into %@ (%@,%@,%@) values ('%@','%@',%ld)",TableName_Table1,Table1_ColumnName1,Table1_ColumnName2,Table1_ColumnName3,@"testColomnValue1",@"testColomnValue2",10001]];
@@ -64,7 +64,7 @@ excerpt: FMDB的使用
   ```
 
   #### 4.获取数据
-  ``` objective-c
+  ``` shell
   if([database open])
 {
     FMResultSet *resultSet= [database executeQuery:[NSString stringWithFormat:@"select * from %@ where %@=%ld",TableName_Table1,Table1_ColumnName3,10001]];
@@ -84,7 +84,7 @@ excerpt: FMDB的使用
   注意：FMResultSet 其实是对数据库的一个引用，必须在数据库开启的时候执行next方法，才能逐条获取导数据。如果关闭后执行next，是获取不到数据的。所以我们应该将FMResultSet的数据逐条获取出来，存储到自己的数据结构中，然后关闭数据库。
 
   #### 5.删除数据
-  ``` objective-c
+  ``` shell
   if([database open])
 {
     BOOL deleteResult=[database executeUpdate:[NSString stringWithFormat:@"delete from %@ where %@='%@' and %@=%ld",TableName_Table1,Table1_ColumnName1,@"testColomnValue1"];
@@ -93,4 +93,4 @@ excerpt: FMDB的使用
   ```
 
 
-  我的FMDB练习地代码：https://github.com/PlayLive/Practice/tree/master/FMDBUse
+  [我的FMDB练习地代码](https://github.com/PlayLive/Practice/tree/master/FMDBUse)

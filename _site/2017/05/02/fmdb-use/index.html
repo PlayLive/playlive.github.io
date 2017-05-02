@@ -223,57 +223,62 @@
 </code></pre>
 
 <p>#### 1.创建数据库</p>
-<pre><code class="language-objective-c">   NSString *documentPath=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-   NSString *databasePath=[documentPath stringByAppendingPathComponent:DataBase_Name];
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>   NSString <span class="k">*</span><span class="nv">documentPath</span><span class="o">=[</span>NSSearchPathForDirectoriesInDomains<span class="o">(</span>NSDocumentDirectory, NSUserDomainMask, YES<span class="o">)</span> lastObject];
+   NSString <span class="k">*</span><span class="nv">databasePath</span><span class="o">=[</span>documentPath stringByAppendingPathComponent:DataBase_Name];
 
-   FMDatabase *database=[FMDatabase databaseWithPath:databasePath];
+   FMDatabase <span class="k">*</span><span class="nv">database</span><span class="o">=[</span>FMDatabase databaseWithPath:databasePath];
 
 </code></pre>
+</div>
 
 <p>#### 2.创建表</p>
-<pre><code class="language-objective-c">  if([database open])
-{
-  BOOL createTableResult=[database executeUpdate: [NSString stringWithFormat:@"create table %@ (%@ text,%@ text,%@ integer)",TableName_Table1,Table1_ColumnName1,Table1_ColumnName2,Table1_ColumnName3]];
-  [database close];
-}
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  <span class="k">if</span><span class="o">([</span>database open]<span class="o">)</span>
+<span class="o">{</span>
+  BOOL <span class="nv">createTableResult</span><span class="o">=[</span>database executeUpdate: <span class="o">[</span>NSString stringWithFormat:@<span class="s2">"create table %@ (%@ text,%@ text,%@ integer)"</span>,TableName_Table1,Table1_ColumnName1,Table1_ColumnName2,Table1_ColumnName3]];
+  <span class="o">[</span>database close];
+<span class="o">}</span>
 </code></pre>
+</div>
 
 <p>#### 3.插入数据</p>
-<pre><code class="language-objective-c">  if([database open])
-{
-  BOOL insertResult=[database executeUpdate:[NSString stringWithFormat:@"insert into %@ (%@,%@,%@) values ('%@','%@',%ld)",TableName_Table1,Table1_ColumnName1,Table1_ColumnName2,Table1_ColumnName3,@"testColomnValue1",@"testColomnValue2",10001]];
-    [database close];
-}
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  <span class="k">if</span><span class="o">([</span>database open]<span class="o">)</span>
+<span class="o">{</span>
+  BOOL <span class="nv">insertResult</span><span class="o">=[</span>database executeUpdate:[NSString stringWithFormat:@<span class="s2">"insert into %@ (%@,%@,%@) values ('%@','%@',%ld)"</span>,TableName_Table1,Table1_ColumnName1,Table1_ColumnName2,Table1_ColumnName3,@<span class="s2">"testColomnValue1"</span>,@<span class="s2">"testColomnValue2"</span>,10001]];
+    <span class="o">[</span>database close];
+<span class="o">}</span>
 </code></pre>
+</div>
 
 <p>#### 4.获取数据</p>
-<pre><code class="language-objective-c">  if([database open])
-{
-    FMResultSet *resultSet= [database executeQuery:[NSString stringWithFormat:@"select * from %@ where %@=%ld",TableName_Table1,Table1_ColumnName3,10001]];
-    if(resultSet==nil)
-    {
-        NSLog(@"select result is null");
-        return payOrderList;
-    }
-    while([resultSet next])
-    {
-       NSString *columnName1Value=[resultSet stringForColumn:Table1_ColumnName1];
-       NSString *columnName2Value=[resultSet stringForColumn:Table1_ColumnName2];
-    }
-    [database close];
-}
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  <span class="k">if</span><span class="o">([</span>database open]<span class="o">)</span>
+<span class="o">{</span>
+    FMResultSet <span class="k">*</span><span class="nv">resultSet</span><span class="o">=</span> <span class="o">[</span>database executeQuery:[NSString stringWithFormat:@<span class="s2">"select * from %@ where %@=%ld"</span>,TableName_Table1,Table1_ColumnName3,10001]];
+    <span class="k">if</span><span class="o">(</span><span class="nv">resultSet</span><span class="o">==</span>nil<span class="o">)</span>
+    <span class="o">{</span>
+        NSLog<span class="o">(</span>@<span class="s2">"select result is null"</span><span class="o">)</span>;
+        <span class="k">return </span>payOrderList;
+    <span class="o">}</span>
+    <span class="k">while</span><span class="o">([</span>resultSet next]<span class="o">)</span>
+    <span class="o">{</span>
+       NSString <span class="k">*</span><span class="nv">columnName1Value</span><span class="o">=[</span>resultSet stringForColumn:Table1_ColumnName1];
+       NSString <span class="k">*</span><span class="nv">columnName2Value</span><span class="o">=[</span>resultSet stringForColumn:Table1_ColumnName2];
+    <span class="o">}</span>
+    <span class="o">[</span>database close];
+<span class="o">}</span>
 </code></pre>
+</div>
 <p>注意：FMResultSet 其实是对数据库的一个引用，必须在数据库开启的时候执行next方法，才能逐条获取导数据。如果关闭后执行next，是获取不到数据的。所以我们应该将FMResultSet的数据逐条获取出来，存储到自己的数据结构中，然后关闭数据库。</p>
 
 <p>#### 5.删除数据</p>
-<pre><code class="language-objective-c">  if([database open])
-{
-    BOOL deleteResult=[database executeUpdate:[NSString stringWithFormat:@"delete from %@ where %@='%@' and %@=%ld",TableName_Table1,Table1_ColumnName1,@"testColomnValue1"];
-    [database close];
-}
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  <span class="k">if</span><span class="o">([</span>database open]<span class="o">)</span>
+<span class="o">{</span>
+    BOOL <span class="nv">deleteResult</span><span class="o">=[</span>database executeUpdate:[NSString stringWithFormat:@<span class="s2">"delete from %@ where %@='%@' and %@=%ld"</span>,TableName_Table1,Table1_ColumnName1,@<span class="s2">"testColomnValue1"</span><span class="o">]</span>;
+    <span class="o">[</span>database close];
+<span class="o">}</span>
 </code></pre>
+</div>
 
-<p>我的FMDB练习地代码：https://github.com/PlayLive/Practice/tree/master/FMDBUse</p>
+<p><a href="https://github.com/PlayLive/Practice/tree/master/FMDBUse">我的FMDB练习地代码</a></p>
 
         </article>
         <hr>
