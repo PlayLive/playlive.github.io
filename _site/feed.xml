@@ -3,18 +3,32 @@
   <channel>
     <title>PlayLive</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Mar 2017 10:59:41 +0800</pubDate>
-    <lastBuildDate>Tue, 14 Mar 2017 10:59:41 +0800</lastBuildDate>
+    <link>https://playlive.github.io/</link>
+    <atom:link href="https://playlive.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 02 May 2017 15:48:47 +0800</pubDate>
+    <lastBuildDate>Tue, 02 May 2017 15:48:47 +0800</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>FMDB的使用</title>
+        <description>FMDB的使用</description>
+        <pubDate>Tue, 02 May 2017 12:30:00 +0800</pubDate>
+        <link>https://playlive.github.io/2017/05/02/fmdb-use/</link>
+        <guid isPermaLink="true">https://playlive.github.io/2017/05/02/fmdb-use/</guid>
+        
+        <category>FMDB</category>
+        
+        
+        <category>框架的使用</category>
+        
+      </item>
     
       <item>
         <title>Github commit 出现错误 ***please tell me who your are</title>
         <description>please tell me who your are</description>
         <pubDate>Tue, 14 Mar 2017 10:16:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/03/14/please-tell-me-who-you-are/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/03/14/please-tell-me-who-you-are/</guid>
+        <link>https://playlive.github.io/2017/03/14/please-tell-me-who-you-are/</link>
+        <guid isPermaLink="true">https://playlive.github.io/2017/03/14/please-tell-me-who-you-are/</guid>
         
         <category>Github</category>
         
@@ -27,8 +41,8 @@
         <title>hello jekyll!</title>
         <description>开始使用Github&amp;Jekyll 写博客，记录工作、生活的点滴</description>
         <pubDate>Thu, 09 Mar 2017 10:45:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/03/09/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/03/09/welcome-to-jekyll/</guid>
+        <link>https://playlive.github.io/2017/03/09/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">https://playlive.github.io/2017/03/09/welcome-to-jekyll/</guid>
         
         <category>jekyll</category>
         
