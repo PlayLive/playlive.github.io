@@ -7,7 +7,7 @@ tags: FMDB
 excerpt: FMDB的使用
 ---
 
-* FMDB的使用
+####  FMDB的使用
 
   最近app中使用了苹果支付来充值，然后苹果支付结果是直接返回给客户端的，而不像支付宝和微信支付等支付平台，支付完成后会回调后台。
 
@@ -21,7 +21,7 @@ excerpt: FMDB的使用
 
   #### 先定义一些常量，比如数据库名、表名、列名，方便后面操作的引用。
 
-``` objective-c
+``` shell
 
   //数据库名
   #define DataBase_Name @"yourDataBaseName.sqlite"
@@ -37,6 +37,7 @@ excerpt: FMDB的使用
 ```
 
   #### 1.创建数据库
+  
   ``` shell
    NSString *documentPath=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
    NSString *databasePath=[documentPath stringByAppendingPathComponent:DataBase_Name];
