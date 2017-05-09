@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Categories</title>
-    <meta name="description" content="">
+    <title>FMDB的使用</title>
+    <meta name="description" content="FMDB的使用">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="https://playlive.github.io/category/">
+    <link rel="canonical" href="https://playlive.github.io/2017/05/09/isiPad/">
     <link rel="alternate" type="application/rss+xml" title="PlayLive" href="https://playlive.github.io/feed.xml ">
 
 
@@ -76,8 +76,8 @@
                     
                     <li>
                         
-                        <a class="active" href="/category/">
-                            
+                        <a href="/category/">
+                        
                             <i class="fa fa-th-list"></i>Categories
                         </a>
                     </li>
@@ -135,192 +135,155 @@
 </header>
 
 
-        <div class="page clearfix">
+        <div class="page clearfix" post>
     <div class="left">
-        <h1>Categories</h1>
+        <h1>FMDB的使用</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2017-05-09
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#框架的使用" title="Category: 框架的使用" rel="category">框架的使用</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#FMDB" title="Tag: FMDB" rel="tag">FMDB</a-->
+        <a href="/tag/#FMDB" title="Tag: FMDB" rel="tag">FMDB</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
         <hr>
-        <ul>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <h4 id="判断当前设备是否是ipad">判断当前设备是否是iPad</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1.不靠谱的判断
+  [UIDevice currentDevice].userInterfaceIdiom==UIUserInterfaceIdiomPad
+
+  判断是否是iPad不靠谱，如果是只支持iPhone的程序，在iPad上运行了，这个判断是NO。
+
+2.靠谱的判断  
+
+  [[UIDevice currentDevice].model isEqualToString:@"iPad"]  
+</code></pre>
+</div>
+
+        </article>
+        <hr>
+
+        
+        
             
-            <h2 id="jekyll">jekyll</h2>
+            
                 
                     
                         
-                    
-                
-                    
+                        <h2 id="similar_posts">Similar Posts</h2>
+                        <ul>
                         
-                        <li>
-                            <time>
-                            2017-03-09 Thu.
-                            </time>
-                            <a class="title" href="/2017/03/09/welcome-to-jekyll/">hello jekyll!</a>
-
+                        <li class="relatedPost">
+                            <a href="https://playlive.github.io/2017/05/02/fmdb-use/">FMDB的使用
                             
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#jekyll" title="Category: jekyll" rel="category">jekyll</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                            
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#jekyll" title="Tag: jekyll" rel="tag">jekyll</a>
-    
-  
-
-</span>
-
+                            </a>
                         </li>
+                        
                         
                     
                 
             
-            <h2 id="Github">Github</h2>
+        
+            
+            
                 
-                    
-                        
-                    
-                
-                    
-                        
-                        <li>
-                            <time>
-                            2017-03-14 Tue.
-                            </time>
-                            <a class="title" href="/2017/03/14/please-tell-me-who-you-are/">Github commit 出现错误 ***please tell me who your are</a>
-
-                            
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#Github" title="Category: Github" rel="category">Github</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                            
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#Github" title="Tag: Github" rel="tag">Github</a>
-    
-  
-
-</span>
-
-                        </li>
-                        
                     
                 
             
-            <h2 id="框架的使用">框架的使用</h2>
+        
+            
+            
                 
-                    
-                        
-                    
-                
-                    
-                        
-                        <li>
-                            <time>
-                            2017-05-09 Tue.
-                            </time>
-                            <a class="title" href="/2017/05/09/isiPad/">FMDB的使用</a>
-
-                            
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#框架的使用" title="Category: 框架的使用" rel="category">框架的使用</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                            
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#FMDB" title="Tag: FMDB" rel="tag">FMDB</a>
-    
-  
-
-</span>
-
-                        </li>
-                        
-                    
-                        
-                        <li>
-                            <time>
-                            2017-05-02 Tue.
-                            </time>
-                            <a class="title" href="/2017/05/02/fmdb-use/">FMDB的使用</a>
-
-                            
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#框架的使用" title="Category: 框架的使用" rel="category">框架的使用</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                            
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#FMDB" title="Tag: FMDB" rel="tag">FMDB</a>
-    
-  
-
-</span>
-
-                        </li>
-                        
                     
                 
             
-        </ul>
+        
+        
+            </ul>
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2017/05/02/fmdb-use/">FMDB的使用</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="https://playlive.github.io/2017/05/09/isiPad/" data-title="FMDB的使用" data-url="https://playlive.github.io/2017/05/09/isiPad/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {
+        short_name: "ioslive"
+    };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
     </div>
     <button class="anchor"><i class="fa fa-anchor"></i></button>
     <div class="right">
@@ -332,25 +295,8 @@
                     Content
                 </div>
                 <ul id="content-side" class="content-ul">
-                    
-                        <li>
-                            <a data-scroll href="#jekyll">
-                                jekyll (1)
-                            </a>
-                        </li>
-                    
-                        <li>
-                            <a data-scroll href="#Github">
-                                Github (1)
-                            </a>
-                        </li>
-                    
-                        <li>
-                            <a data-scroll href="#框架的使用">
-                                框架的使用 (2)
-                            </a>
-                        </li>
-                    
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    <li><a href="#comments">Comments</a></li>
                 </ul>
             </div>
             <!-- 其他div框放到这里 -->
@@ -358,6 +304,17 @@
         </div>
     </div>
 </div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
 <script src="/js/pageContent.js " charset="utf-8"></script>
 
 
