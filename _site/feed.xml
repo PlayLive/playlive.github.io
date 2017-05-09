@@ -5,18 +5,18 @@
     <description></description>
     <link>https://playlive.github.io/</link>
     <atom:link href="https://playlive.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 May 2017 15:46:13 +0800</pubDate>
-    <lastBuildDate>Tue, 09 May 2017 15:46:13 +0800</lastBuildDate>
+    <pubDate>Tue, 09 May 2017 16:45:31 +0800</pubDate>
+    <lastBuildDate>Tue, 09 May 2017 16:45:31 +0800</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>FMDB的使用</title>
-        <description>FMDB的使用</description>
+        <title>判断当前设备是否是iPad</title>
+        <description>判断当前设备是否是iPad</description>
         <pubDate>Tue, 09 May 2017 15:42:00 +0800</pubDate>
         <link>https://playlive.github.io/2017/05/09/isiPad/</link>
         <guid isPermaLink="true">https://playlive.github.io/2017/05/09/isiPad/</guid>
         
-        <category>FMDB</category>
+        <category>iPad</category>
         
         
         <category>框架的使用</category>

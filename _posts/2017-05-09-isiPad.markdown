@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "FMDB的使用"
+title:  "判断当前设备是否是iPad"
 date:   2017-05-09 15:42
 categories: 框架的使用
-tags: FMDB
-excerpt: FMDB的使用
+tags: iPad
+excerpt: 判断当前设备是否是iPad
 ---
 
 ####  判断当前设备是否是iPad
