@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>苹果内购流程</title>
+    <meta name="description" content="苹果内购流程">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2017/06/04/In-App-Purchase/">
+    <link rel="alternate" type="application/rss+xml" title="PlayLive" href="http://localhost:4000/feed.xml ">
+
+
+    <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?87bf8a9ad7bb374e0f22b14180de5c00";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+    <script>
+    // google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-31446991-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">PlayLive</a>
+        <small>iOS开发者</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            <i class="fa fa-bookmark"></i>Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/demo/">
+                        
+                            <i class="fa fa-play"></i>Demo
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>苹果内购流程</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2017-06-04
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#苹果内购流程" title="Category: 苹果内购流程" rel="category">苹果内购流程</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#%E8%8B%B9%E6%9E%9C%E5%86%85%E8%B4%AD%E6%B5%81%E7%A8%8B" title="Tag: 苹果内购流程" rel="tag">苹果内购流程</a-->
+        <a href="/tag/#苹果内购流程" title="Tag: 苹果内购流程" rel="tag">苹果内购流程</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <h4 id="登录itunesconnect">登录iTunesconnect</h4>
+
+<p>1.登录<a href="https://itunesconnect.apple.com/">iTunes Connect</a></p>
+
+<h4 id="协议税务和银行业务-信息完善">协议、税务和银行业务 信息完善</h4>
+
+<p>1.选择协议、税务和银行业务项，如下图所示
+  <img src="http://localhost:4000/assets/inAppPurchase/selectPanel.png" alt="选择协议、税务和银行业务的图片" /></p>
+
+<p>2.选择Request
+  <img src="http://localhost:4000/assets/inAppPurchase/protocolTaxBank.png" alt="协议、税务和银行业务界面" /></p>
+
+<p>按照一步步操作即可,等待审核（需要一点时间可以过一天再看），完毕后即可得到上图Contracts In Effects的一条PaidApplication信息！</p>
+
+<p>3.编辑联系信息
+  <img src="http://localhost:4000/assets/inAppPurchase/contactInformation.png" alt="联系信息界面" /></p>
+
+<p>所有的信息填写同一个人即可</p>
+
+<p>4.税务信息
+  <img src="http://localhost:4000/assets/inAppPurchase/taxInformation-01.png" alt="税务信息" />
+  <img src="http://localhost:4000/assets/inAppPurchase/taxInformation-02.png" alt="税务信息" />
+  <img src="http://localhost:4000/assets/inAppPurchase/taxInformation-03.png" alt="税务信息" />
+  <img src="http://localhost:4000/assets/inAppPurchase/taxInformation-04.png" alt="税务信息" /></p>
+
+<p>5.银行信息填写
+  CNAPS Code <a href="http://www.tui78.com/bank/">银行网点联行号 查询网址</a> 需要哪个银行直接去对应银行链接里面找就行</p>
+
+<p><img src="http://localhost:4000/assets/inAppPurchase/bankingInformation.png" alt="银行信息" /></p>
+
+<p>所有信息填写完毕后我们就可以开始编辑内购项</p>
+
+<h4 id="编辑内购项">编辑内购项</h4>
+
+<p>1.进入iTunes Connect 首界面，选择我的App，选中你需要加入内购的App。</p>
+
+<p>2.内购项目
+  <img src="http://localhost:4000/assets/inAppPurchase/purchaseItems.png" alt="内购完成图片" /></p>
+
+<p>点击+按钮添加自己的内购项目</p>
+
+<p>比如我们的应用是虚拟货币，所以我们选择消耗型,根据需要选择对应的类型，如下图</p>
+
+<p><img src="http://localhost:4000/assets/inAppPurchase/selectPurchasePanel.png" alt="内购完成图片" /></p>
+
+<p>填写内购项的信息
+  <img src="http://localhost:4000/assets/inAppPurchase/purchaseItem1-01.png" alt="内购项信息1" />
+  <img src="http://localhost:4000/assets/inAppPurchase/purchaseItem1-02.png" alt="内购项信息2" /></p>
+
+<p>这里注意图片对应app内部的相应的选项
+  <img src="http://localhost:4000/assets/inAppPurchase/purchaseItem1-03.png" alt="内购项信息3" /></p>
+
+<h4 id="内购代码">内购代码</h4>
+
+<p>1.从自己的服务器上获取充值选项数据，用于展示选择项，每一项对应一个内购项目,带有内购项的ID信息</p>
+
+<p><img src="http://localhost:4000/assets/inAppPurchase/rechargePanel.png" alt="内购选项" /></p>
+
+<p>2.向苹果服务器请求内购信息，根据内购项的ID列表</p>
+
+<figure class="highlight"><pre><code class="language-objective_c" data-lang="objective_c">  <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">requestAppleProducts</span><span class="p">{</span>
+      <span class="n">SKProductsRequest</span> <span class="o">*</span><span class="n">productsRequest</span><span class="o">=</span><span class="p">[[</span><span class="n">SKProductsRequest</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithProductIdentifiers</span><span class="p">:[</span><span class="n">NSSet</span> <span class="nf">setWithArray</span><span class="p">:@[</span><span class="err">你的内购项的</span><span class="n">ID</span><span class="err">列表</span><span class="p">]]</span><span class="err">;</span>
+      <span class="n">productsRequest</span><span class="p">.</span><span class="n">delegate</span><span class="o">=</span><span class="n">self</span><span class="err">;</span>
+      <span class="p">[</span><span class="n">productsRequest</span> <span class="nf">start</span><span class="p">]</span><span class="err">;</span>
+  <span class="p">}</span>
+
+
+  <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">productsRequest</span><span class="p">:(</span><span class="n">SKProductsRequest</span> <span class="o">*</span><span class="p">)</span><span class="n">request</span> <span class="n">didReceiveResponse</span><span class="o">:</span><span class="p">(</span><span class="n">SKProductsResponse</span> <span class="o">*</span><span class="p">)</span><span class="n">response</span>
+  <span class="p">{</span>
+      <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">SKProduct</span><span class="o">*&gt;</span> <span class="o">*</span><span class="n">products</span><span class="o">=</span><span class="p">[</span><span class="n">response</span><span class="p">.</span><span class="n">products</span> <span class="nf">sortedArrayWithOptions</span><span class="p">:</span><span class="n">NSSortConcurrent</span> <span class="nf">usingComparator</span><span class="p">:</span><span class="o">^</span><span class="n">NSComparisonResult</span><span class="p">(</span><span class="n">SKProduct</span> <span class="n">obj1</span><span class="p">,</span> <span class="n">SKProduct</span> <span class="n">obj2</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="p">[</span><span class="n">obj1</span><span class="p">.</span><span class="n">price</span> <span class="nf">compare</span><span class="p">:</span><span class="n">obj2</span><span class="p">.</span><span class="n">price</span><span class="p">];</span>
+      <span class="p">}];</span>
+  <span class="p">}</span>
+
+  </code></pre></figure>
+
+<p>3.选择一个充值项，充值调用</p>
+
+<figure class="highlight"><pre><code class="language-objective_c" data-lang="objective_c"><span class="c1">//请求充值
+</span>  <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">requestPurchase</span>
+  <span class="p">{</span>
+    <span class="c1">//监听内购处理过程
+</span>    <span class="p">[[</span><span class="n">SKPaymentQueue</span> <span class="nf">defaultQueue</span><span class="p">]</span> <span class="nf">addTransactionObserver</span><span class="p">:</span><span class="n">self</span><span class="p">];</span>
+
+    <span class="n">SKProduct</span> <span class="o">*</span><span class="n">product</span><span class="o">=</span><span class="err">选中的项对应的</span><span class="n">product</span><span class="p">;</span>
+    <span class="n">SKPayment</span> <span class="o">*</span><span class="n">payment</span><span class="o">=</span><span class="p">[</span><span class="n">SKPayment</span> <span class="nf">paymentWithProduct</span><span class="p">:</span><span class="n">product</span><span class="p">];</span>
+    <span class="p">[[</span><span class="n">SKPaymentQueue</span> <span class="nf">defaultQueue</span><span class="p">]</span> <span class="nf">addPayment</span><span class="p">:</span><span class="n">payment</span><span class="p">];</span><span class="c1">//执行内购
+</span>  <span class="p">}</span>
+
+
+<span class="c1">//内购支付结果处理
+</span>  <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">paymentQueue</span><span class="o">:</span><span class="p">(</span><span class="n">SKPaymentQueue</span> <span class="o">*</span><span class="p">)</span><span class="n">queue</span> <span class="n">updatedTransactions</span><span class="o">:</span><span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">SKPaymentTransaction</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">transactions</span>
+<span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">SKPaymentTransaction</span> <span class="o">*</span><span class="n">transation</span> <span class="k">in</span> <span class="n">transactions</span><span class="p">){</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">transation</span><span class="p">.</span><span class="n">transactionState</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="n">SKPaymentTransactionStatePurchasing</span><span class="p">:</span>
+                <span class="n">NSLog</span><span class="p">(</span><span class="s">@"正在唤起支付，请稍候"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="n">SKPaymentTransactionStatePurchased</span><span class="p">:</span>
+                <span class="p">[</span><span class="n">queue</span> <span class="nf">finishTransaction</span><span class="p">:</span><span class="n">transation</span><span class="p">];</span>
+                <span class="p">[</span><span class="n">self</span> <span class="nf">handleTransaction</span><span class="p">:</span><span class="n">transation</span><span class="p">];</span>
+                <span class="n">NSLog</span><span class="p">(</span><span class="s">@"充值成功"</span><span class="p">)</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="n">SKPaymentTransactionStateFailed</span><span class="p">:</span>
+                <span class="p">[</span><span class="n">queue</span> <span class="nf">finishTransaction</span><span class="p">:</span><span class="n">transation</span><span class="p">];</span>
+                <span class="n">NSLog</span><span class="p">(</span><span class="s">@"充值失败"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="n">SKPaymentTransactionStateRestored</span><span class="p">:</span>
+                <span class="p">[</span><span class="n">queue</span> <span class="nf">finishTransaction</span><span class="p">:</span><span class="n">transation</span><span class="p">];</span>
+                <span class="p">[</span><span class="n">self</span> <span class="nf">handleTransaction</span><span class="p">:</span><span class="n">transation</span><span class="p">];</span>
+                <span class="n">NSLog</span><span class="p">(</span><span class="s">@"充值失败"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="n">SKPaymentTransactionStateDeferred</span><span class="p">:</span>
+                <span class="n">NSLog</span><span class="p">(</span><span class="s">@"等待充值结果"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">default</span><span class="o">:</span>
+                <span class="n">NSLog</span><span class="p">(</span><span class="s">@"未知错误"</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">handleTransaction</span><span class="o">:</span><span class="p">(</span><span class="n">SKPaymentTransaction</span> <span class="o">*</span><span class="p">)</span><span class="n">transaction</span><span class="p">{</span>
+    <span class="n">NSData</span> <span class="o">*</span><span class="n">receiptData</span><span class="o">=</span><span class="p">[</span><span class="n">NSData</span> <span class="nf">dataWithContentsOfURL</span><span class="p">:[[</span><span class="n">NSBundle</span> <span class="nf">mainBundle</span><span class="p">]</span> <span class="nf">appStoreReceiptURL</span><span class="p">]];</span>
+    <span class="c1">//先把将app内购的结果存储起来，如果出现了意外情况，断网了等没有将结果发送到自己的服务器，那么下次app打开时，可以查询本地没有校验的存储，然后发送给自己的服务端校验！
+</span>
+    <span class="c1">//我的ApplePayDataManager 本地存储帮助类
+</span>    <span class="p">[[</span><span class="n">ApplePayDataManager</span> <span class="nf">Instance</span><span class="p">]</span> <span class="nf">insertPayOrderNo</span><span class="p">:</span><span class="n">transaction</span><span class="p">.</span><span class="n">transactionIdentifier</span> <span class="nf">receiveData</span><span class="p">:[</span><span class="n">receiptData</span> <span class="nf">base64EncodedStringWithOptions</span><span class="p">:</span><span class="mi">0</span><span class="p">]];</span>
+
+    <span class="c1">//把receiptData 发送给自己的服务器，服务器去调用苹果的接口验证，如果校验完毕从本地存储中删除存储的对应的ReceiveData记录。
+</span><span class="p">}</span>
+
+
+  </code></pre></figure>
+
+<h4 id="内购的提交审核">内购的提交审核</h4>
+
+<ol>
+  <li>
+    <p>如果是第一次内购提交审核，那么App提交审核界面上会多出内购项添加的模块，要把需要的所有内购项都添加进来，和App一起提交审核，不然App什么是没法通过的。</p>
+  </li>
+  <li>
+    <p>非常重要，切记把需要的内购项目都添加到提交审核页面对应的块中！</p>
+  </li>
+</ol>
+
+<h4 id="校验结果对照">校验结果对照</h4>
+<p><img src="http://localhost:4000/assets/inAppPurchase/response-01.png" alt="key的解释" />
+<img src="http://localhost:4000/assets/inAppPurchase/response-02.png" alt="status的解释" /></p>
+
+<h4 id="内购的附加信息">内购的附加信息</h4>
+
+<p><a href="https://github.com/PlayLive/Practice/tree/master/FMDBUse">我的ApplePayDataManager类</a></p>
+
+<p><a href="https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html">App内购官方参考</a></p>
+
+<p><a href="https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Chapters/ValidateRemotely.html#//apple_ref/doc/uid/TP40010573-CH104-SW1">App内购流程官方参考</a></p>
+
+<p>处于测试阶段的ReceiveData校验地址： https://sandbox.itunes.apple.com/verifyReceipt</p>
+
+<p>正式上线后的ReceiveData校验地址： https://buy.itunes.apple.com/verifyReceipt</p>
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2017/05/09/isiPad/">判断当前设备是否是iPad</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="http://localhost:4000/2017/06/04/In-App-Purchase/" data-title="苹果内购流程" data-url="http://localhost:4000/2017/06/04/In-App-Purchase/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {
+        short_name: "ioslive"
+    };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             工作、生活和玩的点滴于此 
+        </p>
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/playlive" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
+            <a href="mailto:smallpandadream@163.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
+            <a href="http://weibo.com/ioslive" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>       
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>
