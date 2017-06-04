@@ -3,18 +3,32 @@
   <channel>
     <title>PlayLive</title>
     <description></description>
-    <link>https://playlive.github.io/</link>
-    <atom:link href="https://playlive.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 May 2017 16:45:31 +0800</pubDate>
-    <lastBuildDate>Tue, 09 May 2017 16:45:31 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 04 Jun 2017 15:30:15 +0800</pubDate>
+    <lastBuildDate>Sun, 04 Jun 2017 15:30:15 +0800</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>苹果内购流程</title>
+        <description>苹果内购流程</description>
+        <pubDate>Sun, 04 Jun 2017 15:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/04/In-App-Purchase/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/04/In-App-Purchase/</guid>
+        
+        <category>苹果内购流程</category>
+        
+        
+        <category>苹果内购流程</category>
+        
+      </item>
     
       <item>
         <title>判断当前设备是否是iPad</title>
         <description>判断当前设备是否是iPad</description>
         <pubDate>Tue, 09 May 2017 15:42:00 +0800</pubDate>
-        <link>https://playlive.github.io/2017/05/09/isiPad/</link>
-        <guid isPermaLink="true">https://playlive.github.io/2017/05/09/isiPad/</guid>
+        <link>http://localhost:4000/2017/05/09/isiPad/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/09/isiPad/</guid>
         
         <category>iPad</category>
         
@@ -27,8 +41,8 @@
         <title>FMDB的使用</title>
         <description>FMDB的使用</description>
         <pubDate>Tue, 02 May 2017 12:30:00 +0800</pubDate>
-        <link>https://playlive.github.io/2017/05/02/fmdb-use/</link>
-        <guid isPermaLink="true">https://playlive.github.io/2017/05/02/fmdb-use/</guid>
+        <link>http://localhost:4000/2017/05/02/fmdb-use/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/02/fmdb-use/</guid>
         
         <category>FMDB</category>
         
@@ -41,8 +55,8 @@
         <title>Github commit 出现错误 ***please tell me who your are</title>
         <description>please tell me who your are</description>
         <pubDate>Tue, 14 Mar 2017 10:16:00 +0800</pubDate>
-        <link>https://playlive.github.io/2017/03/14/please-tell-me-who-you-are/</link>
-        <guid isPermaLink="true">https://playlive.github.io/2017/03/14/please-tell-me-who-you-are/</guid>
+        <link>http://localhost:4000/2017/03/14/please-tell-me-who-you-are/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/14/please-tell-me-who-you-are/</guid>
         
         <category>Github</category>
         
@@ -55,8 +69,8 @@
         <title>hello jekyll!</title>
         <description>开始使用Github&amp;Jekyll 写博客，记录工作、生活的点滴</description>
         <pubDate>Thu, 09 Mar 2017 10:45:00 +0800</pubDate>
-        <link>https://playlive.github.io/2017/03/09/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">https://playlive.github.io/2017/03/09/welcome-to-jekyll/</guid>
+        <link>http://localhost:4000/2017/03/09/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/09/welcome-to-jekyll/</guid>
         
         <category>jekyll</category>
         
