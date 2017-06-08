@@ -1,12 +1,12 @@
 ---
 layout: page
-title: About
+title: 关于我
 permalink: /about/
 icon: heart
 type: page
 ---
 
-* content
+* 快速导航
 {:toc}
 
 ## 关于我

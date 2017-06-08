@@ -68,7 +68,7 @@ excerpt: 苹果内购流程
 
 1.从自己的服务器上获取充值选项数据，用于展示选择项，每一项对应一个内购项目,带有内购项的ID信息
 
-  ![内购选项]({{site.url}}/assets/inAppPurchase/rechargePanel.png)
+  ![内购选项]({{site.url}}/assets/inAppPurchase/rechargePanel.PNG)
 
 2.向苹果服务器请求内购信息，根据内购项的ID列表
 
