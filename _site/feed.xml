@@ -5,9 +5,23 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Jun 2017 00:07:07 +0800</pubDate>
-    <lastBuildDate>Fri, 09 Jun 2017 00:07:07 +0800</lastBuildDate>
+    <pubDate>Mon, 12 Jun 2017 21:00:58 +0800</pubDate>
+    <lastBuildDate>Mon, 12 Jun 2017 21:00:58 +0800</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>iOS判断是否连接网络</title>
+        <description>iOS判断是否连接网络</description>
+        <pubDate>Mon, 12 Jun 2017 20:40:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/12/reachability/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/12/reachability/</guid>
+        
+        <category>reachability</category>
+        
+        
+        <category>判断是否连接网络</category>
+        
+      </item>
     
       <item>
         <title>苹果内购流程</title>
