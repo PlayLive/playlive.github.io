@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>关于我</title>
-    <meta name="description" content="">
+    <title>iOS 隐私使用说明（Privacy Usage Description）</title>
+    <meta name="description" content="iOS 隐私使用说明）">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/about/">
+    <link rel="canonical" href="http://localhost:4000/2017/06/13/Privacy/">
     <link rel="alternate" type="application/rss+xml" title="PlayLive" href="http://localhost:4000/feed.xml ">
 
 
@@ -116,8 +116,8 @@
                     
                     <li>
                         
-                        <a class="active" href="/about/">
-                            
+                        <a href="/about/">
+                        
                             <i class="fa fa-heart"></i>关于我
                         </a>
                     </li>
@@ -139,48 +139,159 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>关于我</h1>
+        <h1>iOS 隐私使用说明（Privacy Usage Description）</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2017-06-13
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#iOS发布相关" title="Category: iOS发布相关" rel="category">iOS发布相关</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#Privacy" title="Tag: Privacy" rel="tag">Privacy</a-->
+        <a href="/tag/#Privacy" title="Tag: Privacy" rel="tag">Privacy</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
         <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
-  <li><a href="#关于我" id="markdown-toc-关于我">关于我</a></li>
-  <li><a href="#联系我" id="markdown-toc-联系我">联系我</a></li>
-  <li><a href="#关于本站" id="markdown-toc-关于本站">关于本站</a></li>
-  <li><a href="#comments" id="markdown-toc-comments">Comments</a></li>
+  <li><a href="#遇到问题" id="markdown-toc-遇到问题">遇到问题</a></li>
+  <li><a href="#解决问题" id="markdown-toc-解决问题">解决问题</a></li>
 </ul>
 
-<h2 id="关于我">关于我</h2>
-
-<iframe src="https://githubbadge.appspot.com/playlive" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameborder="0"></iframe>
-
-<h2 id="联系我">联系我</h2>
-
-<table>
-  <tbody>
-    <tr>
-      <td>GitHub</td>
-      <td><a href="https://github.com/playlive">PlayLive</a></td>
-    </tr>
-    <tr>
-      <td>Email</td>
-      <td><a href="mailto:smallpandadream@163.com">smallpandadream@163.com</a></td>
-    </tr>
-    <tr>
-      <td>Weibo</td>
-      <td><a href="http://weibo.com/ioslive">@放飞吧小熊</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="关于本站">关于本站</h2>
+<h4 id="遇到问题">遇到问题</h4>
 
 <ul>
-  <li>工作、生活和玩的点滴记录</li>
+  <li>
+    <p>今天遇到了一个很奇怪的问题，App 的新版发布好了，用 Xcode 上传到 App Store 显示 Success 的标志了。却在 iTunesConnect 的对应 App 的活动&gt;构建版本中，怎么也找不到了。然后修改了 build 的版本号，重现打包上传了好几依然找不到，这让我百思不得其解，完全懵逼！</p>
+  </li>
+  <li>
+    <p>试着搜索 Xcode 打包上传成功 构建版本中找不到，有很多人遇到了同样的问题，原来都是 <strong>隐私使用说明</strong> 没有设置惹得祸呀。</p>
+  </li>
+  <li>
+    <p>然后翻阅一下官方文档对应的信息  <a href="https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/ExpectedAppBehaviors/ExpectedAppBehaviors.html#//apple_ref/doc/uid/TP40007072-CH3-SW5">App Programming Guide for iOS</a> 看到了  <strong>The Information Property List File</strong> 下的一段信息</p>
+    <blockquote>
+      <p>Apps must provide purpose strings (sometimes called “usage descriptions”) for accessing user data and certain app features. When there is a privacy concern about an app accessing user data or device capabilities, iOS prompts the user and requests permission on behalf of your app. An app must explain to the user, by way of a purpose string defined in its Info.plist file, why it requires access. If your app attempts to gain access without having provided a corresponding purpose string, your app exits.</p>
+    </blockquote>
+  </li>
 </ul>
 
-<h2 id="comments">Comments</h2>
+<h4 id="解决问题">解决问题</h4>
 
+<ul>
+  <li>
+    <p>我们在 Info.plist 中设置好 <strong>隐私使用说明</strong> 就好了   <a href="https://developer.apple.com/library/content/qa/qa1937/_index.html">隐私说明的key参照</a></p>
+  </li>
+  <li>
+    <p>如下图所示做类似的设置然后修改 build 的版本号，重新打包上传就好了
+<img src="http://localhost:4000/assets/privacy/privacy.png" alt="Privacy设置图片" /></p>
+  </li>
+</ul>
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2017/06/12/reachability/">iOS判断是否连接网络</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="http://localhost:4000/about/" data-title="关于我" data-url="http://localhost:4000/about/"></div>
+<div class="ds-thread" data-thread-key="http://localhost:4000/2017/06/13/Privacy/" data-title="iOS 隐私使用说明（Privacy Usage Description）" data-url="http://localhost:4000/2017/06/13/Privacy/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -196,8 +307,11 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
 </script>
-
 <!-- 多说公共JS代码 end -->
+
+
+
+
 
 
     </div>
@@ -208,9 +322,11 @@
             <!-- Content -->
             <div class="side content">
                 <div>
-                    快速导航
+                    Content
                 </div>
                 <ul id="content-side" class="content-ul">
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    <li><a href="#comments">Comments</a></li>
                 </ul>
             </div>
             <!-- 其他div框放到这里 -->
@@ -218,6 +334,17 @@
         </div>
     </div>
 </div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
 <script src="/js/pageContent.js " charset="utf-8"></script>
 
 
