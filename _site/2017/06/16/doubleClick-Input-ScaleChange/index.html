@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>iOS 隐私使用说明（Privacy Usage Description）</title>
-    <meta name="description" content="iOS 隐私使用说明）">
+    <title>WKWebView 禁用双击缩放和横向滚动</title>
+    <meta name="description" content="WKWebView 禁用双击缩放和横向滚动">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/2017/06/13/Privacy/">
+    <link rel="canonical" href="http://localhost:4000/2017/06/16/doubleClick-Input-ScaleChange/">
     <link rel="alternate" type="application/rss+xml" title="PlayLive" href="http://localhost:4000/feed.xml ">
 
 
@@ -139,11 +139,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>iOS 隐私使用说明（Privacy Usage Description）</h1>
+        <h1>WKWebView 禁用双击缩放和横向滚动</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2017-06-13
+                <i class="fa fa-calendar"></i>2017-06-16
             </div>
 
             <div class="label-card">
@@ -163,7 +163,9 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#iOS发布相关" title="Category: iOS发布相关" rel="category">iOS发布相关</a>
+        <a href="/category/#WKWebView" title="Category: WKWebView" rel="category">WKWebView</a>&nbsp;
+    
+        <a href="/category/#禁用双击缩放和横向滚动" title="Category: 禁用双击缩放和横向滚动" rel="category">禁用双击缩放和横向滚动</a>
     
   
 
@@ -180,8 +182,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#Privacy" title="Tag: Privacy" rel="tag">Privacy</a-->
-        <a href="/tag/#Privacy" title="Tag: Privacy" rel="tag">Privacy</a>
+        <!--a href="/tag/#WKWebView" title="Tag: WKWebView" rel="tag">WKWebView</a-->
+        <a href="/tag/#WKWebView" title="Tag: WKWebView" rel="tag">WKWebView</a>
     
   
 
@@ -195,36 +197,59 @@
         <ul id="markdown-toc">
   <li><a href="#遇到问题" id="markdown-toc-遇到问题">遇到问题</a></li>
   <li><a href="#解决问题" id="markdown-toc-解决问题">解决问题</a></li>
+  <li><a href="#wkwebview-禁用-zoom" id="markdown-toc-wkwebview-禁用-zoom">WKWebView 禁用 Zoom</a></li>
+  <li><a href="#html-的放大缩小禁用" id="markdown-toc-html-的放大缩小禁用">Html 的放大缩小禁用</a></li>
+  <li><a href="#input-标签的替换" id="markdown-toc-input-标签的替换">Input 标签的替换</a></li>
 </ul>
 
 <h4 id="遇到问题">遇到问题</h4>
 
+<p>WKWebView 加载h5的小说阅读页面</p>
 <ul>
   <li>
-    <p>今天遇到了一个很奇怪的问题，App 的新版发布好了，用 Xcode 上传到 App Store 显示 Success 的标志了。却在 iTunesConnect 的对应 App 的活动&gt;构建版本中，怎么也找不到了。然后修改了 build 的版本号，重现打包上传了好几依然找不到，这让我百思不得其解，完全懵逼！</p>
+    <p>放大缩小手势会放大和缩小网页，这是我们不需要的！</p>
   </li>
   <li>
-    <p>试着搜索 Xcode 打包上传成功 构建版本中找不到，有很多人遇到了同样的问题，原来都是 <strong>隐私使用说明</strong> 没有设置惹得祸呀。</p>
-  </li>
-  <li>
-    <p>然后翻阅一下官方文档对应的信息  <a href="https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/ExpectedAppBehaviors/ExpectedAppBehaviors.html#//apple_ref/doc/uid/TP40007072-CH3-SW5">App Programming Guide for iOS</a> 看到了  <strong>The Information Property List File</strong> 下的一段信息</p>
-    <blockquote>
-      <p>Apps must provide purpose strings (sometimes called “usage descriptions”) for accessing user data and certain app features. When there is a privacy concern about an app accessing user data or device capabilities, iOS prompts the user and requests permission on behalf of your app. An app must explain to the user, by way of a purpose string defined in its Info.plist file, why it requires access. If your app attempts to gain access without having provided a corresponding purpose string, your app exits.</p>
-    </blockquote>
+    <p>当点击放大字体和缩小字体时，双击就会导致网页整体放大！如下图所示：</p>
   </li>
 </ul>
+
+<p><img src="http://localhost:4000/assets/doubleClickScaleChange/question.png" alt="问题图片" /></p>
 
 <h4 id="解决问题">解决问题</h4>
 
+<h3 id="wkwebview-禁用-zoom">WKWebView 禁用 Zoom</h3>
+
+<figure class="highlight"><pre><code class="language-objective_c" data-lang="objective_c">  <span class="n">self</span><span class="p">.</span><span class="n">webView</span><span class="p">.</span><span class="n">scrollView</span><span class="p">.</span><span class="n">alwaysBounceVertical</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+  <span class="n">self</span><span class="p">.</span><span class="n">webView</span><span class="p">.</span><span class="n">scrollView</span><span class="p">.</span><span class="n">showsHorizontalScrollIndicator</span> <span class="o">=</span> <span class="nb">NO</span><span class="p">;</span>
+  <span class="n">self</span><span class="p">.</span><span class="n">webView</span><span class="p">.</span><span class="n">scrollView</span><span class="p">.</span><span class="n">bouncesZoom</span> <span class="o">=</span> <span class="nb">NO</span><span class="p">;</span>
+
+  </code></pre></figure>
+
+<h3 id="html-的放大缩小禁用">Html 的放大缩小禁用</h3>
 <ul>
-  <li>
-    <p>我们在 Info.plist 中设置好 <strong>隐私使用说明</strong> 就好了   <a href="https://developer.apple.com/library/content/qa/qa1937/_index.html">隐私说明的key参照</a></p>
-  </li>
-  <li>
-    <p>如下图所示做类似的设置然后修改 build 的版本号，重新打包上传就好了
-<img src="http://localhost:4000/assets/privacy/privacy.png" alt="Privacy设置图片" /></p>
-  </li>
+  <li>加入顶部 DOCTYPE dtd</li>
 </ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">   <span class="cp">&lt;!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd"&gt;</span>
+
+ </code></pre></figure>
+
+<ul>
+  <li>加入meta 禁止缩放的信息</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"</span><span class="nt">&gt;</span>
+
+ </code></pre></figure>
+
+<h3 id="input-标签的替换">Input 标签的替换</h3>
+<ul>
+  <li>上面的方法都做了之后，双击A+ 、A- 按钮的时候，WebView还是被放大了。然后我就去看传过来的Html源码了，发现
+ 我们的 A+ 、A- 按钮为了做按钮样式方便, 都是使用的 Input 标签，然后我们把 Input 标签都换成了 div 标签。这样问题就彻底解决了！</li>
+</ul>
+
+<p><img src="http://localhost:4000/assets/doubleClickScaleChange/solve.png" alt="解决后的图片" /></p>
 
         </article>
         <hr>
@@ -285,13 +310,11 @@
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2017/06/12/reachability/">iOS判断是否连接网络</a></p>
+        <p><strong>上一篇</strong> <a href="/2017/06/13/Privacy/">iOS 隐私使用说明（Privacy Usage Description）</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2017/06/16/doubleClick-Input-ScaleChange/">WKWebView 禁用双击缩放和横向滚动</a></p>
         
     </div>
 </div>
@@ -300,7 +323,7 @@
         <h2 id="comments">Comments</h2>
         
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="http://localhost:4000/2017/06/13/Privacy/" data-title="iOS 隐私使用说明（Privacy Usage Description）" data-url="http://localhost:4000/2017/06/13/Privacy/"></div>
+<div class="ds-thread" data-thread-key="http://localhost:4000/2017/06/16/doubleClick-Input-ScaleChange/" data-title="WKWebView 禁用双击缩放和横向滚动" data-url="http://localhost:4000/2017/06/16/doubleClick-Input-ScaleChange/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

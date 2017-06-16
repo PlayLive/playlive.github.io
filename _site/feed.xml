@@ -5,9 +5,25 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Jun 2017 13:41:30 +0800</pubDate>
-    <lastBuildDate>Tue, 13 Jun 2017 13:41:30 +0800</lastBuildDate>
+    <pubDate>Fri, 16 Jun 2017 18:34:01 +0800</pubDate>
+    <lastBuildDate>Fri, 16 Jun 2017 18:34:01 +0800</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>WKWebView 禁用双击缩放和横向滚动</title>
+        <description>WKWebView 禁用双击缩放和横向滚动</description>
+        <pubDate>Fri, 16 Jun 2017 18:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/16/doubleClick-Input-ScaleChange/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/16/doubleClick-Input-ScaleChange/</guid>
+        
+        <category>WKWebView</category>
+        
+        
+        <category>WKWebView</category>
+        
+        <category>禁用双击缩放和横向滚动</category>
+        
+      </item>
     
       <item>
         <title>iOS 隐私使用说明（Privacy Usage Description）</title>

@@ -21,7 +21,7 @@ excerpt: iOS判断是否连接网络
 
 #### 调用方式
 
-{% highlight objective_c%}
+{% highlight objective_c %}
 
 [[ReachabilityManager Instance] setHostName:"www.apple.com" complete:^{
     if([[ReachabilityManager Instance] canReachHttp])
