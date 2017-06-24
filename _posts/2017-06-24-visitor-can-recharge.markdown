@@ -16,7 +16,7 @@ excerpt: 苹果审核，关于未登录时购买内容，引导登录时需要�
 * 嗨糖 1.2.2 提交审核被苹果拒了，原因是 用户购买内容时，强制用户登录后充值，而没有提供游客充值的入口。
 如下图所示：
 
-![问题图片]({{site.url}}/assets/visitorRecharge/question.png)
+![问题图片]({{site.url}}/assets/visitorRecharge/imgQuestion.png)
 
 * 点击 <strong>去登录</strong> 按钮后, 我们直接跳转到了登录页面，这个是不允许的。
 
@@ -29,7 +29,7 @@ excerpt: 苹果审核，关于未登录时购买内容，引导登录时需要�
 
 如下图所示：
 
- ![解决后的图片]({{site.url}}/assets/visitorRecharge/resolve.png)
+ ![解决后的图片]({{site.url}}/assets/visitorRecharge/imgResolve.png)
 
 * 游客充值： 会直接跳转到充值也，可以完整的走通苹果的充值流程，但是结果我们不会发给后端也不会存储。因为我们完全不知道它是谁。
 
