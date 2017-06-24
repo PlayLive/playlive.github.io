@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>iOS判断是否连接网络</title>
-    <meta name="description" content="iOS判断是否连接网络">
+    <title>苹果审核，关于未登录时购买内容，引导登录时需要提供游客充值的入口</title>
+    <meta name="description" content="苹果审核，关于未登录时购买内容，引导登录时需要提供游客充值的入口">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/2017/06/12/reachability/">
+    <link rel="canonical" href="http://localhost:4000/2017/06/24/visitor-can-recharge/">
     <link rel="alternate" type="application/rss+xml" title="PlayLive" href="http://localhost:4000/feed.xml ">
 
 
@@ -139,11 +139,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>iOS判断是否连接网络</h1>
+        <h1>苹果审核，关于未登录时购买内容，引导登录时需要提供游客充值的入口</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2017-06-12
+                <i class="fa fa-calendar"></i>2017-06-24
             </div>
 
             <div class="label-card">
@@ -163,7 +163,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#判断是否连接网络" title="Category: 判断是否连接网络" rel="category">判断是否连接网络</a>
+        <a href="/category/#苹果审核" title="Category: 苹果审核" rel="category">苹果审核</a>
     
   
 
@@ -180,8 +180,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#reachability" title="Tag: reachability" rel="tag">reachability</a-->
-        <a href="/tag/#reachability" title="Tag: reachability" rel="tag">reachability</a>
+        <!--a href="/tag/#%E8%8B%B9%E6%9E%9C%E5%AE%A1%E6%A0%B8" title="Tag: 苹果审核" rel="tag">苹果审核</a-->
+        <a href="/tag/#苹果审核" title="Tag: 苹果审核" rel="tag">苹果审核</a>
     
   
 
@@ -193,44 +193,46 @@
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
-  <li><a href="#遇到的问题" id="markdown-toc-遇到的问题">遇到的问题</a></li>
-  <li><a href="#调用方式" id="markdown-toc-调用方式">调用方式</a></li>
+  <li><a href="#遇到问题" id="markdown-toc-遇到问题">遇到问题</a></li>
+  <li><a href="#解决问题" id="markdown-toc-解决问题">解决问题</a></li>
 </ul>
 
-<h4 id="遇到的问题">遇到的问题</h4>
-<ol>
-  <li>
-    <p>iOS10 以上的系统，第一次下载一个app的时候会出现这样一个问题。当用户还没有选择是否允许使用wifi和蜂窝网络的时候，如果这时候已经进入app的主界面，那么就会所有的数据访问失败，导致界面一片空白，没有任何数据。这时如果用户选择了允许访问wifi和蜂窝网络后，没有一个像允许通知的api，来通知app网络已经连接上了。</p>
-  </li>
-  <li>
-    <p>为了解决这个问题，我们需要自己来监听网络环境是否有变化，如果监听到变化了，知道网络已经连接上，这时重新请求数据就能够获取到了，然后将app的主界面填充起来！</p>
-  </li>
-  <li>
-    <p>监听网络环境的iOS没有现有的Api供调用，但是苹果官方有个Demo里面有一个对应的类Reachability <a href="https://developer.apple.com/library/content/samplecode/Reachability/Introduction/Intro.html">获取项目</a></p>
-  </li>
-  <li>
-    <p>为了方便调用，我自己做了一个封装类  <a href="https://github.com/PlayLive/Practice/tree/master/Reachability">封装类地址</a></p>
-  </li>
-</ol>
+<h4 id="遇到问题">遇到问题</h4>
 
-<h4 id="调用方式">调用方式</h4>
+<ul>
+  <li>嗨糖 1.2.2 提交审核被苹果拒了，原因是 用户购买内容时，强制用户登录后充值，而没有提供游客充值的入口。
+如下图所示：</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-objective_c" data-lang="objective_c"><span class="p">[[</span><span class="n">ReachabilityManager</span> <span class="nf">Instance</span><span class="p">]</span> <span class="nf">setHostName</span><span class="p">:</span><span class="s">"www.apple.com"</span> <span class="nf">complete</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
-    <span class="k">if</span><span class="p">([[</span><span class="n">ReachabilityManager</span> <span class="nf">Instance</span><span class="p">]</span> <span class="nf">canReachHttp</span><span class="p">])</span>
-    <span class="p">{</span>
-        <span class="p">[</span><span class="err">请求你自己的数据</span><span class="p">]();</span>
-        <span class="p">[[</span><span class="n">ReachabilityManager</span> <span class="nf">Instance</span><span class="p">]</span> <span class="nf">stop</span><span class="p">];</span>
-    <span class="p">}</span>
-<span class="p">}];</span>
-<span class="k">if</span><span class="p">([[</span><span class="n">ReachabilityManager</span> <span class="nf">Instance</span><span class="p">]</span> <span class="nf">canReachHttp</span><span class="p">])</span>
-<span class="p">{</span>
-    <span class="p">[</span><span class="err">请求你自己的数据</span><span class="p">]();</span>
-    <span class="p">[[</span><span class="n">ReachabilityManager</span> <span class="nf">Instance</span><span class="p">]</span> <span class="nf">stop</span><span class="p">];</span>
-<span class="p">}</span><span class="k">else</span>
-<span class="p">{</span>
-    <span class="p">[[</span><span class="n">ReachabilityManager</span> <span class="nf">Instance</span><span class="p">]</span> <span class="nf">start</span><span class="p">];</span>
-<span class="p">}</span></code></pre></figure>
+<p><img src="http://localhost:4000/assets/visitorRecharge/question.png" alt="问题图片" /></p>
 
+<ul>
+  <li>点击 <strong>去登录</strong> 按钮后, 我们直接跳转到了登录页面，这个是不允许的。</li>
+</ul>
+
+<h4 id="解决问题">解决问题</h4>
+
+<ul>
+  <li>
+    <p>按照苹果的规则，我们在点击去登录按钮后，加了一个中间提示选择界面。提示用户登录后充值才是有效充值，未登录情况下的充值将不会被记录，明确告知用户风险。</p>
+  </li>
+  <li>
+    <p>然后提供了 <strong> 游客充值 </strong> 或 <strong>登录</strong> 两个入口，游客充值按钮 尽量的小而且不显眼，因为那里进入充值也是白充的。然后把登录做的大一些，尽量显眼，让用户知道要点击登录按钮，才是正确的。</p>
+  </li>
+</ul>
+
+<p>如下图所示：</p>
+
+<p><img src="http://localhost:4000/assets/visitorRecharge/resolve.png" alt="解决后的图片" /></p>
+
+<ul>
+  <li>
+    <p>游客充值： 会直接跳转到充值也，可以完整的走通苹果的充值流程，但是结果我们不会发给后端也不会存储。因为我们完全不知道它是谁。</p>
+  </li>
+  <li>
+    <p>登录：跳转到登录页面，登录成功后，制动返回当前章节页。</p>
+  </li>
+</ul>
 
         </article>
         <hr>
@@ -298,13 +300,11 @@
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2017/06/04/In-App-Purchase/">苹果内购流程</a></p>
+        <p><strong>上一篇</strong> <a href="/2017/06/16/doubleClick-Input-ScaleChange/">WKWebView 禁用双击缩放和横向滚动</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2017/06/13/Privacy/">iOS 隐私使用说明（Privacy Usage Description）</a></p>
         
     </div>
 </div>
@@ -313,7 +313,7 @@
         <h2 id="comments">Comments</h2>
         
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="http://localhost:4000/2017/06/12/reachability/" data-title="iOS判断是否连接网络" data-url="http://localhost:4000/2017/06/12/reachability/"></div>
+<div class="ds-thread" data-thread-key="http://localhost:4000/2017/06/24/visitor-can-recharge/" data-title="苹果审核，关于未登录时购买内容，引导登录时需要提供游客充值的入口" data-url="http://localhost:4000/2017/06/24/visitor-can-recharge/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

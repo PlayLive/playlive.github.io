@@ -5,9 +5,23 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Jun 2017 18:34:01 +0800</pubDate>
-    <lastBuildDate>Fri, 16 Jun 2017 18:34:01 +0800</lastBuildDate>
+    <pubDate>Sat, 24 Jun 2017 09:00:21 +0800</pubDate>
+    <lastBuildDate>Sat, 24 Jun 2017 09:00:21 +0800</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>苹果审核，关于未登录时购买内容，引导登录时需要提供游客充值的入口</title>
+        <description>苹果审核，关于未登录时购买内容，引导登录时需要提供游客充值的入口</description>
+        <pubDate>Sat, 24 Jun 2017 09:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/24/visitor-can-recharge/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/24/visitor-can-recharge/</guid>
+        
+        <category>苹果审核</category>
+        
+        
+        <category>苹果审核</category>
+        
+      </item>
     
       <item>
         <title>WKWebView 禁用双击缩放和横向滚动</title>
