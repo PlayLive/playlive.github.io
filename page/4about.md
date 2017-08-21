@@ -45,7 +45,3 @@ type: page
 ## 关于本站
 
 * 工作、生活和玩的点滴记录
-
-## Comments
-
-{% include comments.html %}
